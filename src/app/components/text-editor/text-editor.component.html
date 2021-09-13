@@ -77,3 +77,15 @@
         <ng-template #elseBlock>Start Typing! 🙀</ng-template>
     </span>
 </div>
+
+<!-- Pentagon Passcodes -->
+<div class="row mt-5">
+    <div class="col">
+        Pentagon Passcodes
+        <ul>
+            <li *ngFor="let lc of luckyCrypto; index as i">
+                {{ i+1 }}: {{ lc }}
+            </li>
+        </ul>
+    </div>
+</div>

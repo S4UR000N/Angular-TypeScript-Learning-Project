@@ -57,7 +57,7 @@
     <div class="col">
         <div class="input-group mb-3">
             <span class="input-group-text">Input</span>
-            <input type="text" class="form-control" [(ngModel)]="output">
+            <input type="text" class="form-control" [(ngModel)]="output" (focus)="hadInteractionInput=true">
         </div>
     </div>
 </div>    
@@ -72,10 +72,8 @@
             'text-decoration-line-through': decorations.TEXT_DECORATION_LINE_THROUGH === decoration
         }"
     >
-        {{ output }}
+        <div *ngIf="hadInteractionInput; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>{{ output }}</ng-template>
+        <ng-template #elseBlock>Start Typing! 🙀</ng-template>
     </span>
 </div>
-
-<!-- <div>
-    - <span [ngClass]="{'text-danger': colors.RED === color}">{{ output }}</span>
-</div> -->

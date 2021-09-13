@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./text-editor.component.css']
 })
 export class TextEditorComponent implements OnInit {
+  hadInteractionInput: boolean = false;
   colors = {
     DEFAULT: "default",
     RED: "red",
@@ -19,6 +20,7 @@ export class TextEditorComponent implements OnInit {
 
   color: string = 'default';
   decoration: string = "default";
+
   output: string = "Example Input";
 
   constructor() {}

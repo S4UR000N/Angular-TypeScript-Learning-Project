@@ -1,0 +1,81 @@
+<!-- Color pick -->
+<div class="row mt-4">
+    <div class="col">
+        <button
+            class="btn btn-secondary"
+            [disabled]="color == 'default'"
+            (click)="color='default'"
+        >
+            Default
+        </button>
+        <button
+            class="btn btn-danger ms-2"
+            [disabled]="color == 'red'"
+            (click)="color='red'"
+        >
+            Red
+        </button>
+        <button
+            class="btn btn-primary ms-2"
+            [disabled]="color == 'blue'"
+            (click)="color='blue'"
+        >
+            Blue
+        </button>
+    </div>
+</div>
+
+<!-- Text decoration pick -->
+<div class="row mt-4">
+    <div class="col">
+        <button
+            class="btn btn-sm btn-secondary"
+            [disabled]="decoration == 'default'"
+            (click)="decoration='default'"
+        >
+            Default
+        </button>
+        <button
+            class="btn btn-sm btn-secondary text-decoration-underline ms-2"
+            [disabled]="decoration == 'text-decoration-underline'"
+            (click)="decoration='text-decoration-underline'"
+        >
+            Underline Text
+        </button>
+        <button
+            class="btn btn-sm btn-secondary text-decoration-line-through ms-2"
+            [disabled]="decoration == 'text-decoration-line-through'"
+            (click)="decoration='text-decoration-line-through'"
+        >
+            Line Through Text
+        </button>
+    </div>
+</div>
+
+<!-- Text input -->
+<div class="row mt-4">
+    <div class="col">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Input</span>
+            <input type="text" class="form-control" [(ngModel)]="output">
+        </div>
+    </div>
+</div>    
+
+<!-- Output with all text attributes applied -->
+<div>
+        -
+    <span [ngClass]="{
+            'text-danger': colors.RED === color,
+            'text-primary': colors.BLUE === color,
+            'text-decoration-underline': decorations.TEXT_DECORATION_UNDERLINE === decoration,
+            'text-decoration-line-through': decorations.TEXT_DECORATION_LINE_THROUGH === decoration
+        }"
+    >
+        {{ output }}
+    </span>
+</div>
+
+<!-- <div>
+    - <span [ngClass]="{'text-danger': colors.RED === color}">{{ output }}</span>
+</div> -->

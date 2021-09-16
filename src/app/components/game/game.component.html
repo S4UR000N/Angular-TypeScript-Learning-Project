@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <!-- Header -->
+    <div class="row">
+        <div class="col text-center">
+            <h3 class="">APP Component: Funny Game It Is</h3>
+        </div>
+    </div>
+    <hr>
+    
+    <!-- <app-text-editor></app-text-editor> -->
+    <!-- Game Control Component -->
+    <app-game-control (tickEmitter)="tickAbsorber($event)"></app-game-control>
+    <hr>
+
+    <!-- Game Display: Odd and Even -->
+    <app-game-display [duration]="duration"></app-game-display>
+</div>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-game-control',
@@ -6,11 +6,11 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
   styleUrls: ['./game-control.component.css']
 })
 export class GameControlComponent implements OnInit {
-  public isRunning: boolean = false
+  public isRunning: boolean = false;
   public duration: number = 0;
 
   private ref: any;
-  private tickEmitter: EventEmitter<number> = new EventEmitter<number>();
+  @Output() private tickEmitter: EventEmitter<number> = new EventEmitter<number>();
 
 
   constructor() {}

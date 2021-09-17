@@ -1,1 +1,6 @@
-<p>Odd!</p>
+<p class="text-warning bg-dark">Odd!</p>
+<div *ngFor="let item of odd">
+    <span [ngStyle]="{color: 'red'}">
+        {{item}}
+    </span>
+</div>

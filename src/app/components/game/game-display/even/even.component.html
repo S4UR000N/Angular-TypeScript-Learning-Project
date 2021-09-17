@@ -1,1 +1,6 @@
-<p>Even!</p>
+<p class="text-warning bg-dark">Even!</p>
+<div *ngFor="let item of even">
+    <span [ngStyle]="{color: 'red'}">
+        {{item}}
+    </span>
+</div>

@@ -6,11 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./game-display.component.css']
 })
 export class GameDisplayComponent implements OnInit {
-  @Input() public duration = 0;
-
-
-  constructor() { }
-
-
+  @Input() public duration: number = 0;
+  constructor() {}
   ngOnInit(): void {}
 }

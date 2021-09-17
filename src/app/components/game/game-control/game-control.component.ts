@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -12,9 +13,7 @@ export class GameControlComponent implements OnInit {
   private ref: any;
   @Output() private tickEmitter: EventEmitter<number> = new EventEmitter<number>();
 
-
   constructor() {}
-
 
   start(): void {
     this.isRunning = true;

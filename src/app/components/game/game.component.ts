@@ -8,11 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GameComponent implements OnInit {
   public duration: number = 0;
 
+  constructor() {}
 
-  constructor() { }
-
-
-  tickAbsorber(tickEmitterEvent: number) {
+  // Setters
+  set absorbDuration(value: number) {
+    this.duration = value;
+  }
+  // Actions
+  tickAbsorber(tickEmitterEvent: number): void {
     this.duration = tickEmitterEvent;
   }
   ngOnInit(): void {}

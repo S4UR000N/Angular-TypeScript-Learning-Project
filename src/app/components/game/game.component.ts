@@ -11,8 +11,8 @@ export class GameComponent implements OnInit {
   constructor() {}
 
   // Setters
-  set absorbDuration(value: number) {
-    this.duration = value;
+  set absorbDuration(duration: number) {
+    this.duration = duration;
   }
   // Actions
   tickAbsorber(tickEmitterEvent: number): void {

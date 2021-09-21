@@ -8,15 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class OddComponent implements OnInit {
   public odd: number[] = [];
 
-  @Input() set displayOdd(input: number) {
-    if(input%2 != 0) {
-      this.odd.push(input);
-    }  }
-
 
   constructor() {}
 
 
-  colorGenerator(value: number) {}
+  colorGenerator(value: number) {
+    // rip no time for cool features
+    return 'red';
+  }
   ngOnInit(): void {}
 }

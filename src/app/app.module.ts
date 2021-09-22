@@ -10,6 +10,7 @@ import { GameDisplayComponent } from './components/game/game-display/game-displa
 import { OddComponent } from './components/game/game-display/odd/odd.component';
 import { EvenComponent } from './components/game/game-display/even/even.component';
 import { GameComponent } from './components/game/game.component';
+import { PowerUpDirective } from './directives/attribute/power-up.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GameComponent } from './components/game/game.component';
     GameDisplayComponent,
     OddComponent,
     EvenComponent,
-    GameComponent
+    GameComponent,
+    PowerUpDirective
   ],
   imports: [
     BrowserModule,
